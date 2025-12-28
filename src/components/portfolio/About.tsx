@@ -18,7 +18,6 @@ const aboutSections = [
     items: [
       "Machine Learning & AI",
       "Database Management Systems",
-      "Data Structures in C",
       "Python for scalable applications",
       "Basics of system design",
     ],
