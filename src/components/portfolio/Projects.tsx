@@ -32,59 +32,59 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-16 md:py-24">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-sm font-bold mb-4 hover-scale">
+        <div className="text-center mb-10 md:mb-16">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-muted text-xs sm:text-sm font-bold mb-3 md:mb-4 hover-scale">
             My Projects
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 font-serif">
             Check out my <span className="italic">latest work</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-md mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto px-2">
             Building projects that <strong className="text-foreground">solve real problems</strong> with clean, efficient code.
           </p>
         </div>
 
         {/* Projects List */}
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           {projects.map((project, index) => (
             <div 
               key={project.title} 
               className="project-card group hover-lift border border-transparent hover:border-border"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="project-icon font-bold text-xl group-hover:bg-muted transition-colors">
+              <div className="project-icon font-bold text-lg sm:text-xl group-hover:bg-muted transition-colors shrink-0">
                 {project.initial}
               </div>
 
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-bold text-lg">{project.title}</h3>
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <h3 className="font-bold text-base sm:text-lg">{project.title}</h3>
                   {project.soon && (
                     <span className="text-xs px-2 py-0.5 rounded-full bg-primary text-primary-foreground font-semibold">
                       Soon
                     </span>
                   )}
                 </div>
-                <p className="text-muted-foreground">{project.tags.join(" • ")}</p>
+                <p className="text-muted-foreground text-sm">{project.tags.join(" • ")}</p>
               </div>
 
-              <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div className="flex items-center gap-1 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300">
                 <a
                   href={project.github}
-                  className="p-2.5 rounded-lg hover:bg-muted transition-colors hover-scale"
+                  className="p-2 sm:p-2.5 rounded-lg hover:bg-muted transition-colors hover-scale"
                   title="View source"
                 >
-                  <Github className="h-5 w-5" />
+                  <Github className="h-4 w-4 sm:h-5 sm:w-5" />
                 </a>
                 <a
                   href={project.demo}
-                  className="p-2.5 rounded-lg hover:bg-muted transition-colors hover-scale"
+                  className="p-2 sm:p-2.5 rounded-lg hover:bg-muted transition-colors hover-scale"
                   title="View demo"
                 >
-                  <ExternalLink className="h-5 w-5" />
+                  <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5" />
                 </a>
               </div>
             </div>
