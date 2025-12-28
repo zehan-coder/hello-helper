@@ -32,11 +32,6 @@ const aboutSections = [
     ],
   },
   {
-    icon: HelpCircle,
-    title: "Looking for Help With",
-    items: ["Advanced ML concepts", "Model optimization & deployment", "Industry-level project guidance"],
-  },
-  {
     icon: MessageCircle,
     title: "Ask Me About",
     items: ["AI & ML fundamentals", "Python programming", "DBMS concepts", "Problem-solving & logic building"],
