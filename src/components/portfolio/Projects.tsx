@@ -1,123 +1,90 @@
-import { ExternalLink, Github, Folder } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    initial: "M",
     title: "ML Project Coming Soon",
-    description:
-      "A machine learning project focused on solving real-world problems with practical AI solutions.",
+    description: "Machine learning focused on real-world use cases",
     tags: ["Python", "TensorFlow", "Pandas"],
     github: "#",
     demo: "#",
-    placeholder: true,
+    soon: true,
   },
   {
+    initial: "D",
     title: "Data Analytics Dashboard",
-    description:
-      "Interactive dashboard for visualizing and analyzing complex datasets with intuitive UI.",
+    description: "Interactive dashboard for data visualization",
     tags: ["Python", "Streamlit", "Plotly"],
     github: "#",
     demo: "#",
-    placeholder: true,
+    soon: true,
   },
   {
+    initial: "A",
     title: "AI Automation Tool",
-    description:
-      "Automation tool leveraging AI to streamline repetitive tasks and improve workflow efficiency.",
-    tags: ["Python", "OpenAI", "FastAPI"],
+    description: "Automation leveraging AI for workflows",
+    tags: ["Python", "FastAPI", "OpenAI"],
     github: "#",
     demo: "#",
-    placeholder: true,
+    soon: true,
   },
 ];
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent pointer-events-none" />
-
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="projects" className="py-16">
+      <div className="section-container">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Projects</span>
+        <div className="text-center mb-12">
+          <span className="inline-block px-3 py-1 rounded-full bg-muted text-sm font-medium mb-4">
+            My Projects
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
+            Check out my latest work
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Here are some projects I'm working on. More coming soon as I build out my portfolio!
+          <p className="text-muted-foreground max-w-md mx-auto">
+            I've worked on a variety of projects, from simple scripts to complex applications. Here are a few highlights.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <Card
-              key={project.title}
-              className="glass-card hover-glow group transition-all duration-300 hover:border-primary/50 overflow-hidden"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardContent className="p-6">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <Folder className="h-10 w-10 text-primary" />
-                  <div className="flex gap-2">
-                    <a href={project.github} className="text-muted-foreground hover:text-foreground transition-colors">
-                      <Github className="h-5 w-5" />
-                    </a>
-                    <a href={project.demo} className="text-muted-foreground hover:text-foreground transition-colors">
-                      <ExternalLink className="h-5 w-5" />
-                    </a>
-                  </div>
+        {/* Projects List */}
+        <div className="space-y-2">
+          {projects.map((project) => (
+            <div key={project.title} className="project-card group">
+              <div className="project-icon">
+                {project.initial}
+              </div>
+
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="font-medium">{project.title}</h3>
+                  {project.soon && (
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground">
+                      Soon
+                    </span>
+                  )}
                 </div>
+                <p className="text-sm text-muted-foreground">{project.tags.join(", ")}</p>
+              </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag) => (
-                    <Badge
-                      key={tag}
-                      variant="secondary"
-                      className="text-xs bg-muted/50 hover:bg-primary/20 transition-colors"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-
-                {/* Placeholder Badge */}
-                {project.placeholder && (
-                  <div className="mt-4 pt-4 border-t border-border/50">
-                    <Badge variant="outline" className="text-xs border-secondary/50 text-secondary">
-                      Coming Soon
-                    </Badge>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+              <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a
+                  href={project.github}
+                  className="p-2 rounded-lg hover:bg-muted transition-colors"
+                  title="View source"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+                <a
+                  href={project.demo}
+                  className="p-2 rounded-lg hover:bg-muted transition-colors"
+                  title="View demo"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <Button
-              variant="outline"
-              className="border-primary/50 hover:bg-primary/10 hover:border-primary transition-all duration-300"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              View More on GitHub
-            </Button>
-          </a>
         </div>
       </div>
     </section>

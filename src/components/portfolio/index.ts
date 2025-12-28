@@ -1,4 +1,4 @@
-export { Navigation } from "./Navigation";
+export { FloatingDock } from "./FloatingDock";
 export { Hero } from "./Hero";
 export { About } from "./About";
 export { Projects } from "./Projects";
