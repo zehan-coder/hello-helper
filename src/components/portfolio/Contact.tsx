@@ -20,27 +20,22 @@ export const Contact = () => {
             Ready to Build Something <span className="italic">Great?</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-lg mx-auto">
-            I'm available for <strong className="text-foreground">collaborations</strong>, <strong className="text-foreground">projects</strong>, and <strong className="text-foreground">learning opportunities</strong>.
+            I'm available for <strong className="text-foreground">collaborations</strong>,{" "}
+            <strong className="text-foreground">projects</strong>, and{" "}
+            <strong className="text-foreground">learning opportunities</strong>.
           </p>
         </div>
 
         {/* CTA Card */}
         <div className="max-w-xl mx-auto p-8 rounded-2xl border border-border bg-muted/20 hover-lift">
-          <p className="text-center mb-6 text-muted-foreground text-lg">
-            Prefer DMs? Reach me on <strong className="text-foreground">X (Twitter)</strong>. I'm quick to respond.
-          </p>
+          <p className="text-center mb-6 text-muted-foreground text-lg"></p>
 
           {/* Social Buttons */}
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             {socialLinks.map((social) => {
               const IconComponent = social.icon;
               return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="gap-2 font-semibold hover-lift">
                     <IconComponent className="h-4 w-4" />
                     {social.label}
