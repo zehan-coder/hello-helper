@@ -2,9 +2,9 @@ import { Twitter, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const socialLinks = [
-  { icon: Twitter, label: "@vitthal", href: "https://twitter.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Github, label: "GitHub", href: "https://github.com" },
+  { icon: Twitter, label: "@Shandaar_", href: "https://twitter.com/Shandaar_" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/vitthal-jauhari/" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Vitthal-Jauhari/" },
 ];
 
 export const Contact = () => {
@@ -54,10 +54,10 @@ export const Contact = () => {
           <p className="text-center text-muted-foreground">
             Or email:{" "}
             <a
-              href="mailto:vitthal@example.com"
+              href="mailto:vitthaljauhari@gmail.com"
               className="font-bold text-foreground underline underline-offset-4 hover:no-underline transition-all"
             >
-              vitthal@example.com
+              vitthaljauhari@gmail.com
             </a>
           </p>
         </div>

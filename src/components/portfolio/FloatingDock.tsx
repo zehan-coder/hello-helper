@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 const navItems = [
   { icon: Home, href: "#home", label: "Home" },
   { icon: FolderOpen, href: "#projects", label: "Projects" },
-  { icon: Github, href: "https://github.com", label: "GitHub", external: true },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", external: true },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter", external: true },
+  { icon: Github, href: "https://github.com/Vitthal-Jauhari/", label: "GitHub", external: true },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/vitthal-jauhari/", label: "LinkedIn", external: true },
+  { icon: Twitter, href: "https://twitter.com/Shandaar_", label: "Twitter", external: true },
 ];
 
 export const FloatingDock = () => {
