@@ -52,7 +52,7 @@ export const FloatingDock = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-0.5 sm:gap-1">
         {navItems.map((item) => {
           const IconComponent = item.icon;
           return (
@@ -66,19 +66,19 @@ export const FloatingDock = () => {
               }`}
               title={item.label}
             >
-              <IconComponent className="h-5 w-5" />
+              <IconComponent className="h-4 w-4 sm:h-5 sm:w-5" />
             </a>
           );
         })}
 
-        <div className="w-px h-6 bg-border mx-1" />
+        <div className="w-px h-5 sm:h-6 bg-border mx-0.5 sm:mx-1" />
 
         <button
           onClick={toggleTheme}
           className="dock-item hover-scale"
           title="Toggle theme"
         >
-          {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          {isDark ? <Sun className="h-4 w-4 sm:h-5 sm:w-5" /> : <Moon className="h-4 w-4 sm:h-5 sm:w-5" />}
         </button>
       </div>
     </nav>

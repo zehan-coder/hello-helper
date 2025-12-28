@@ -97,13 +97,13 @@
   }
 
   .dock {
-    @apply fixed bottom-6 left-1/2 -translate-x-1/2 z-50;
+    @apply fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50;
     @apply bg-background/80 backdrop-blur-xl border border-border;
-    @apply rounded-full px-2 py-2 shadow-lg;
+    @apply rounded-full px-1.5 sm:px-2 py-1.5 sm:py-2 shadow-lg;
   }
 
   .dock-item {
-    @apply p-3 rounded-full transition-all duration-200;
+    @apply p-2 sm:p-3 rounded-full transition-all duration-200;
     @apply hover:bg-muted text-muted-foreground hover:text-foreground;
   }
 
@@ -112,40 +112,40 @@
   }
 
   .status-badge {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full;
-    @apply bg-muted/50 border border-border text-sm;
+    @apply inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full;
+    @apply bg-muted/50 border border-border text-xs sm:text-sm;
   }
 
   .status-dot {
-    @apply w-2 h-2 rounded-full bg-[hsl(var(--success))] animate-pulse;
+    @apply w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[hsl(var(--success))] animate-pulse;
   }
 
   .section-container {
-    @apply max-w-2xl mx-auto px-6;
+    @apply max-w-2xl mx-auto px-4 sm:px-6;
   }
 
   .timeline-item {
-    @apply flex items-start gap-4 py-4;
+    @apply flex items-start gap-3 sm:gap-4 py-3 sm:py-4;
   }
 
   .timeline-logo {
-    @apply w-12 h-12 rounded-full bg-muted flex items-center justify-center;
-    @apply text-sm font-medium text-foreground shrink-0;
+    @apply w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-muted flex items-center justify-center;
+    @apply text-xs sm:text-sm font-medium text-foreground shrink-0;
   }
 
   .skill-tag {
-    @apply px-3 py-1.5 rounded-md bg-muted text-sm font-medium;
+    @apply px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-md bg-muted text-xs sm:text-sm font-medium;
     @apply hover:bg-muted/80 transition-colors cursor-default;
   }
 
   .project-card {
-    @apply flex items-center gap-4 p-4 rounded-xl;
+    @apply flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl;
     @apply hover:bg-muted/50 transition-all duration-200;
   }
 
   .project-icon {
-    @apply w-12 h-12 rounded-xl border border-border flex items-center justify-center;
-    @apply text-lg font-medium bg-background;
+    @apply w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-border flex items-center justify-center;
+    @apply text-base sm:text-lg font-medium bg-background;
   }
 }
 
