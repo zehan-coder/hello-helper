@@ -1,9 +1,9 @@
-import { Navigation, Hero, About, Projects, Contact, Footer } from "@/components/portfolio";
+import { FloatingDock, Hero, About, Projects, Contact, Footer } from "@/components/portfolio";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <FloatingDock />
       <main>
         <Hero />
         <About />
