@@ -6,13 +6,7 @@ export const Hero = () => {
         <div className="flex items-start justify-between mb-8">
           <div className="animate-in">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
-              Hi, I'm <span className="text-foreground">Vitthal</span>{" "}
-              <span 
-                className="inline-block origin-[70%_70%]"
-                style={{ animation: "wave 2.5s ease-in-out infinite" }}
-              >
-                👋
-              </span>
+              Hi, I'm <span className="text-foreground">Vitthal</span>
             </h1>
             <p className="text-xl text-muted-foreground animate-in-delay-1">
               <span className="font-semibold text-foreground">AI/ML Engineering Student</span> — building, learning, and sharing.
