@@ -4,40 +4,46 @@ export const Hero = () => {
       <div className="section-container">
         {/* Header with name and avatar */}
         <div className="flex items-start justify-between mb-8">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">
-              Hi, I'm Vitthal{" "}
-              <span className="inline-block animate-[wave_2s_ease-in-out_infinite] origin-[70%_70%]">
+          <div className="animate-in">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
+              Hi, I'm <span className="text-foreground">Vitthal</span>{" "}
+              <span 
+                className="inline-block origin-[70%_70%]"
+                style={{ animation: "wave 2.5s ease-in-out infinite" }}
+              >
                 👋
               </span>
             </h1>
-            <p className="text-lg text-muted-foreground">
-              AI/ML Engineering Student — building, learning, and sharing.
+            <p className="text-xl text-muted-foreground animate-in-delay-1">
+              <span className="font-semibold text-foreground">AI/ML Engineering Student</span> — building, learning, and sharing.
             </p>
           </div>
 
-          {/* Avatar placeholder */}
-          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-muted border-2 border-border overflow-hidden shrink-0">
-            <div className="w-full h-full flex items-center justify-center text-2xl font-semibold text-muted-foreground">
+          {/* Avatar */}
+          <div 
+            className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-muted to-muted/50 border-2 border-border overflow-hidden shrink-0 animate-in-delay-2 hover-scale"
+            style={{ animation: "float 4s ease-in-out infinite, scale-in 0.6s ease-out 0.2s forwards" }}
+          >
+            <div className="w-full h-full flex items-center justify-center text-3xl font-bold text-foreground">
               VJ
             </div>
           </div>
         </div>
 
         {/* Availability Badge */}
-        <div className="status-badge mb-12">
+        <div className="status-badge mb-12 animate-in-delay-2 hover-lift cursor-default">
           <span className="status-dot" />
-          <span>Available — Open to projects and collaborations</span>
+          <span><strong>Available</strong> — Open to projects and collaborations</span>
         </div>
 
         {/* About */}
-        <div className="mb-16">
-          <h2 className="text-xl font-semibold mb-4">About</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            I'm an AI-focused engineering student passionate about building practical,
-            impact-driven tech. I enjoy turning complex problems into simple, efficient
-            solutions using AI, data, and code. I learn fast, build consistently, and
-            care about clean logic over hype.
+        <div className="mb-16 animate-in-delay-3">
+          <h2 className="text-2xl font-bold mb-4">About</h2>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            I'm an <strong className="text-foreground font-semibold">AI-focused engineering student</strong> passionate about building practical,
+            impact-driven tech. I enjoy turning <strong className="text-foreground font-semibold">complex problems into simple, efficient
+            solutions</strong> using AI, data, and code. I learn fast, build consistently, and
+            care about <strong className="text-foreground font-semibold">clean logic over hype</strong>.
           </p>
         </div>
       </div>

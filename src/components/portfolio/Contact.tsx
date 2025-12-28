@@ -13,47 +13,49 @@ export const Contact = () => {
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-muted text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-sm font-bold mb-4 hover-scale">
             Let's Connect
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Ready to Build Something Great?
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
+            Ready to Build Something <span className="italic">Great?</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            I'm available for collaborations, projects, and learning opportunities. 
-            Whether you have an idea or just want to say hi — reach out!
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto">
+            I'm available for <strong className="text-foreground">collaborations</strong>, <strong className="text-foreground">projects</strong>, and <strong className="text-foreground">learning opportunities</strong>.
           </p>
         </div>
 
         {/* CTA Card */}
-        <div className="max-w-xl mx-auto p-8 rounded-2xl border border-border bg-muted/20">
-          <p className="text-center mb-6 text-muted-foreground">
-            Prefer DMs? Reach me on X (Twitter). I'm quick to respond.
+        <div className="max-w-xl mx-auto p-8 rounded-2xl border border-border bg-muted/20 hover-lift">
+          <p className="text-center mb-6 text-muted-foreground text-lg">
+            Prefer DMs? Reach me on <strong className="text-foreground">X (Twitter)</strong>. I'm quick to respond.
           </p>
 
           {/* Social Buttons */}
           <div className="flex flex-wrap justify-center gap-3 mb-6">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline" className="gap-2">
-                  <social.icon className="h-4 w-4" />
-                  {social.label}
-                </Button>
-              </a>
-            ))}
+            {socialLinks.map((social) => {
+              const IconComponent = social.icon;
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" className="gap-2 font-semibold hover-lift">
+                    <IconComponent className="h-4 w-4" />
+                    {social.label}
+                  </Button>
+                </a>
+              );
+            })}
           </div>
 
           {/* Email */}
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-center text-muted-foreground">
             Or email:{" "}
             <a
               href="mailto:vitthal@example.com"
-              className="text-foreground underline underline-offset-4 hover:no-underline"
+              className="font-bold text-foreground underline underline-offset-4 hover:no-underline transition-all"
             >
               vitthal@example.com
             </a>
