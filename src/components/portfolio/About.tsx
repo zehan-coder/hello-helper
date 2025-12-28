@@ -116,16 +116,6 @@ export const About = () => {
               </CardContent>
             </Card>
           ))}
-
-          {/* Fun Fact Card */}
-          <Card className="glass-card border-secondary/30 hover:border-secondary/50 transition-all duration-300 md:col-span-2 lg:col-span-1">
-            <CardContent className="p-6 flex flex-col items-center justify-center text-center h-full">
-              <h3 className="font-semibold text-lg mb-2">Fun Fact</h3>
-              <p className="text-muted-foreground">
-                I prefer clarity over complexity—if it can be simpler, it should be.
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
