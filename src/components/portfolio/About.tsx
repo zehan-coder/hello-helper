@@ -85,11 +85,11 @@ export const About = () => {
         </div>
 
         {/* Info Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {aboutSections.map((section, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          {aboutSections.slice(0, 3).map((section, index) => (
             <Card
               key={section.title}
-              className="glass-card hover-glow group transition-all duration-300 hover:border-primary/50"
+              className="glass-card hover-glow group transition-all duration-300 hover:border-primary/50 w-full"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-6">
@@ -110,6 +110,31 @@ export const About = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Centered Ask Me About Card */}
+        <div className="flex justify-center mt-6">
+          <Card
+            className="glass-card hover-glow group transition-all duration-300 hover:border-primary/50 w-full md:w-1/2 lg:w-1/3"
+            style={{ animationDelay: `300ms` }}
+          >
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <MessageCircle className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg">Ask Me About</h3>
+              </div>
+              <ul className="space-y-2">
+                {aboutSections[3].items.map((item, i) => (
+                  <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
+                    <span className="text-primary mt-1.5">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
