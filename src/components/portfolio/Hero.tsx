@@ -1,3 +1,5 @@
+import profilePhoto from "@/assets/profile-photo.png";
+
 export const Hero = () => {
   return (
     <section id="home" className="pt-20 md:pt-24 pb-12 md:pb-16">
@@ -18,9 +20,11 @@ export const Hero = () => {
             className="w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-muted to-muted/50 border-2 border-border overflow-hidden shrink-0 animate-in-delay-2 hover-scale"
             style={{ animation: "float 4s ease-in-out infinite, scale-in 0.6s ease-out 0.2s forwards" }}
           >
-            <div className="w-full h-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-foreground">
-              VJ
-            </div>
+            <img 
+              src={profilePhoto} 
+              alt="Vitthal Jauhari" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
