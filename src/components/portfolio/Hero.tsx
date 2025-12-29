@@ -17,13 +17,13 @@ export const Hero = () => {
 
           {/* Avatar */}
           <div 
-            className="w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-muted to-muted/50 border-2 border-border overflow-hidden shrink-0 animate-in-delay-2 hover-scale"
+            className="w-20 h-28 sm:w-20 sm:h-28 md:w-24 md:h-36 rounded-2xl bg-gradient-to-br from-muted to-muted/50 border-2 border-border overflow-hidden shrink-0 animate-in-delay-2 transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:border-primary/50"
             style={{ animation: "float 4s ease-in-out infinite, scale-in 0.6s ease-out 0.2s forwards" }}
           >
             <img 
               src={profilePhoto} 
               alt="Vitthal Jauhari" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-110"
             />
           </div>
         </div>
