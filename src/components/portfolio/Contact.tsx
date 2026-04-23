@@ -11,24 +11,19 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="section-container">
-        {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
           <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-muted text-xs sm:text-sm font-bold mb-3 md:mb-4 hover-scale">
-            Let's Connect
+            Let&apos;s Connect
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 font-serif">
-            Ready to Build Something <span className="italic">Great?</span>
+            Let&apos;s build something <span className="italic">useful</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto px-2">
-            I'm available for <strong className="text-foreground">collaborations</strong>,{" "}
-            <strong className="text-foreground">projects</strong>, and{" "}
-            <strong className="text-foreground">learning opportunities</strong>.
+          <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto px-2">
+            I&apos;m open to <strong className="text-foreground">internships</strong>, <strong className="text-foreground">AI collaborations</strong>, <strong className="text-foreground">embedded systems work</strong>, and thoughtful freelance builds.
           </p>
         </div>
 
-        {/* CTA Card */}
         <div className="max-w-xl mx-auto p-5 sm:p-8 rounded-2xl border border-border bg-muted/20 hover-lift">
-          {/* Social Buttons */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 mb-5 sm:mb-6">
             {socialLinks.map((social) => {
               const IconComponent = social.icon;
@@ -43,14 +38,13 @@ export const Contact = () => {
             })}
           </div>
 
-          {/* Email */}
           <p className="text-center text-muted-foreground text-sm sm:text-base">
-            Or email:{" "}
+            Or email: {" "}
             <a
-              href="mailto:vitthaljauhari@gmail.com"
+              href="mailto:vitthaljauhari@email.com"
               className="font-bold text-foreground underline underline-offset-4 hover:no-underline transition-all break-all"
             >
-              vitthaljauhari@gmail.com
+              vitthaljauhari@email.com
             </a>
           </p>
         </div>

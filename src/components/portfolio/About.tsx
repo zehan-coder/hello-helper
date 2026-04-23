@@ -1,59 +1,76 @@
-import { Brain, BookOpen, Users, HelpCircle, MessageCircle, Sparkles } from "lucide-react";
+import { Brain, Cpu, Code2, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const aboutSections = [
   {
     icon: Brain,
-    title: "Currently Working On",
+    title: "What I Build",
     items: [
-      "AI & ML projects focused on real-world use cases",
-      "Strengthening DSA, Python, and system fundamentals",
-      "Building a strong developer portfolio with meaningful projects",
+      "End-to-end AI systems spanning NLP, computer vision, and automation workflows",
+      "Multilingual problem-solving tools designed for real-world accessibility and impact",
+      "Practical ML experiences that connect research ideas to usable products",
     ],
   },
   {
-    icon: BookOpen,
-    title: "Currently Learning",
+    icon: Cpu,
+    title: "Engineering Focus",
     items: [
-      "Machine Learning & AI",
-      "Database Management Systems",
-      "Python for scalable applications",
-      "Basics of system design",
+      "Embedded AI systems using Arduino, ESP-based hardware, and PlatformIO",
+      "Perception pipelines for gesture recognition, voice interaction, and depth-aware autonomy",
+      "Scalable ML builds that balance performance, usability, and deployment readiness",
     ],
   },
   {
-    icon: Users,
-    title: "Looking to Collaborate On",
+    icon: Code2,
+    title: "Working Style",
     items: [
-      "AI / ML projects",
-      "Data-driven applications",
-      "Open-source tools related to automation, analytics, or AI",
+      "Strong fundamentals in Python, Java, DSA, OOP, SQL, and Linux workflows",
+      "Comfortable shipping polished web experiences alongside backend-integrated AI features",
+      "Fast learner who enjoys collaboration, iteration, and solving concrete user problems",
     ],
   },
   {
     icon: MessageCircle,
     title: "Ask Me About",
-    items: ["AI & ML fundamentals", "Python programming", "DBMS concepts", "Problem-solving & logic building"],
+    items: [
+      "Computer vision and embedded ML pipelines",
+      "Multimodal AI systems with NLP and voice interfaces",
+      "Data preprocessing, model workflows, and practical deployment",
+      "Freelance product builds and turning ideas into working demos",
+    ],
   },
 ];
 
 const skills = [
   "Python",
+  "Java",
+  "DSA",
+  "OOP",
+  "Git & GitHub",
+  "Linux",
+  "SQL & Databases",
+  "Data Analysis",
+  "Data Preprocessing",
   "Machine Learning",
+  "Deep Learning",
+  "Computer Vision",
   "TensorFlow",
-  "Data Structures",
-  "SQL",
-  "C Programming",
-  "Problem Solving",
-  "Git",
+  "PyTorch",
+  "Arduino",
+  "ESP Systems",
+  "PlatformIO",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Vercel",
+  "Cloudflare",
 ];
 
 export const About = () => {
   return (
     <section id="about" className="py-16 md:py-24 relative">
       <div className="container mx-auto px-4 sm:px-6">
-        {/* Section Header */}
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
             About <span className="gradient-text">Me</span>
@@ -61,30 +78,25 @@ export const About = () => {
           <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
         </div>
 
-        {/* Main Intro */}
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed px-2">
-            I'm an AI-focused engineering student passionate about building practical, impact-driven tech. I enjoy
-            turning complex problems into simple, efficient solutions using AI, data, and code. I learn fast, build
-            consistently, and care about clean logic over hype.
+            I&apos;m a B.Tech Artificial Intelligence student at Amity University, Noida with hands-on experience across embedded systems, multilingual AI, autonomous perception, and freelance product development. I like building systems that are thoughtful, efficient, and grounded in useful outcomes.
           </p>
         </div>
 
-        {/* Skills Badges */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 md:mb-16 px-2">
           {skills.map((skill, index) => (
             <Badge
               key={skill}
               variant="outline"
               className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default"
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * 60}ms` }}
             >
               {skill}
             </Badge>
           ))}
         </div>
 
-        {/* Info Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
           {aboutSections.slice(0, 3).map((section, index) => (
             <Card
@@ -103,7 +115,7 @@ export const About = () => {
                   {section.items.map((item, i) => (
                     <li key={i} className="text-muted-foreground text-xs sm:text-sm flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -112,11 +124,10 @@ export const About = () => {
           ))}
         </div>
 
-        {/* Centered Ask Me About Card */}
         <div className="flex justify-center mt-4 sm:mt-6">
           <Card
             className="glass-card hover-glow group transition-all duration-300 hover:border-primary/50 w-full md:w-1/2 lg:w-1/3"
-            style={{ animationDelay: `300ms` }}
+            style={{ animationDelay: "300ms" }}
           >
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center gap-3 mb-3 sm:mb-4">
@@ -129,7 +140,7 @@ export const About = () => {
                 {aboutSections[3].items.map((item, i) => (
                   <li key={i} className="text-muted-foreground text-xs sm:text-sm flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
-                    {item}
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
